@@ -19,8 +19,8 @@ The code is modular and config-driven. All results in the paper are reproducible
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/NahinAlam001/RadMultiBench_Reproduce.git
-   cd RadMultiBench_Reproduce
+   git clone https://github.com/NahinAlam001/RadMultiBench.git
+   cd RadMultiBench
    ```
 
 2. **Install all required packages:**
