@@ -36,7 +36,6 @@ The code is modular and config-driven. All results in the paper are reproducible
      gdown 'https://docs.google.com/uc?export=download&id=1nZyV1NPTcEV6zN_MZPiWGzLujBqI_3pH'
      unzip data.zip
      rm data.zip
-     mv data data
      ```
    - Once extracted, ensure the directory structure is as follows:
      ```
