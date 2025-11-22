@@ -1,0 +1,29 @@
+# -----------------------------------------------
+# Base config
+# -----------------------------------------------
+TASK: "classification" # 'classification' or 'generation'
+
+DATA:
+  IMG_DIR: "./data/images"
+  CSV_PATH: "./data/clean_map.csv"
+  SPLIT_RATIOS: [0.7, 0.15, 0.15] # Train, Val, Test
+  NUM_WORKERS: 4
+  # For LSTM/Generation Vocab
+  MIN_WORD_FREQ: 3
+  MAX_SEQ_LEN: 64 # ResNet-LSTM: 64, CLIP-GPT: 128
+  PAD_IDX: 0
+  SOS_IDX: 2
+  EOS_IDX: 3
+
+SOLVER:
+  OPTIMIZER: "AdamW"
+  LR: 1e-4
+  WEIGHT_DECAY: 0.01
+  BETAS: [0.9, 0.999]
+  WARMUP_STEPS: 1000
+  LABEL_SMOOTHING: 0.1
+  GRADIENT_CLIP: 1.0
+
+SEED: 42
+OUTPUT_DIR: "./output"
+DEVICE: "cuda"

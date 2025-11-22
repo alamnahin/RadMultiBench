@@ -1,0 +1,20 @@
+_BASE_: "base.yaml"
+
+TASK: "generation"
+
+MODEL:
+  NAME: "clip_gpt_generation"
+  CLIP_DIM: 512
+  GPT_DIM: 768
+  DROPOUT: 0.1
+  PREFIX_LENGTH: 1
+
+DATA:
+  MAX_SEQ_LEN: 128 
+
+SOLVER:
+  NUM_EPOCHS: 20
+  BATCH_SIZE: 32
+  GRADIENT_CLIP: 1.0 
+
+OUTPUT_DIR: "./output/clip_gpt_generation"

@@ -1,0 +1,20 @@
+_BASE_: "base.yaml"
+
+TASK: "generation"
+
+MODEL:
+  NAME: "biovil_t_generation"
+  DROPOUT: 0.1
+  IMAGE_DIM: 2048
+  GPT_DIM: 768
+  PREFIX_LENGTH: 1
+
+DATA:
+  MAX_SEQ_LEN: 128
+
+SOLVER:
+  NUM_EPOCHS: 18
+  BATCH_SIZE: 16 
+  GRADIENT_CLIP: 0.1
+
+OUTPUT_DIR: "./output/biovil_t_generation"
